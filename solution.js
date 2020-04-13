@@ -17,14 +17,16 @@ console.log(firstListItem);
 // let listIem = document.querySelector("li");
 let allListItems = document.querySelectorAll("li");
 for (let i = 0; i < allListItems.length; i++) {
-    // let newText = document.createTextNode(".");
-    // allListItems[i].appendChild(newText);
-    let text = allListItems[i].innerText;
-    let newText = `${text}.`
+    
+    // let text = allListItems[i].innerText; //"Getting" the value of inner text 
+    // let newText = `${text}.`
+    // allListItems[i].innerText = newText; // Reassign or setting what the value of inner text is
 
-    // text = `${allListItems[0]}`;
-    console.log(allListItems);
-    // console.log(text);
+    let newText = allListItems[i].innerText += "."; // Getting and Setting the value of inner text all in 1 step.
+    
+
+
+
     console.log(newText);
 }
 
@@ -107,13 +109,9 @@ console.log(parentElement);
 
 let allLis = document.querySelectorAll("li");
 for (let i = 0; i < allLis.length; i++) {
-    if (allLis[i].textContent === "Become White Wizard.") {
-        let parentElem = allLis[i].parentElement;
-        console.log(parentElem);
-    } else {
-        console.log("No Matches!");
-    }
+    if (allLis[i].textContent == "Become White Wizard.") {
+        let grandparentElem = allLis[i].parentElement.parentElement;
+        console.log(grandparentElem);
+    } 
 }
-
-
 
